@@ -60,6 +60,7 @@ public class Main {
         System.out.print("Masukan IPK Mahasiswa: ");
         double addIPK = Double.parseDouble(br.readLine());
         Mahasiswa mhsBaru = new Mahasiswa(addnama, addnim, addIPK); 
+        // add == menambahkan data ke array list
         mahasiswa.add(mhsBaru);
         //pemanggilan method registrasi
         mhsBaru.registrasi();
@@ -76,7 +77,7 @@ public class Main {
             System.out.println("Nama Mahasiswa: " + mahasiswa.get(i).nama);
             System.out.println("NIM Mahasiswa: " + mahasiswa.get(i).nim);
             System.out.println("IPK Mahasiswa: " + mahasiswa.get(i).IPK);
-            System.out.println("\n");
+            System.out.print("\n");
         }
     }
     
@@ -94,6 +95,7 @@ public class Main {
         System.out.print("Masukan IPK Mahasiswa: ");
         double setIPK = Double.parseDouble(br.readLine());
 
+        // memasukan data yang baru ke array list (menggantikannya)
         mahasiswa.get(index-1).nama = setNAMA;
         mahasiswa.get(index-1).nim = setNIM;
         mahasiswa.get(index-1).IPK = setIPK;
@@ -107,6 +109,7 @@ public class Main {
         System.out.println(" +++ DELETE DATA MAHASISWA +++");
         System.out.print("Masukan Data Mahasiswa ke-");
         int index = Integer.parseInt(br.readLine());
+        // remove == menghapus data dari array list
         mahasiswa.remove(index-1);
     }
 }
